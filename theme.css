@@ -1,9 +1,11 @@
 /* ==UserStyle==
-@name			"Safe Mode" for Roblox
-@description    Safe Mode is a work in progress "safe mode" for Roblox. Think of it like a privacy mode, or a streamer mode. It hides your Inventory, prevents you from modifying your Settings and About, hides Friends, disables Notifications and Website Chat, disables Robux purchasing and a lot more stuff.
-@author			thomasluigi07
-@version		2024.07.30
-@namespace		userstyles.world/user/thomasluigi07
+@name		"Safe Mode" for Roblox
+@description    Safe Mode is a work in progress "safe mode" for Roblox. Think of it like a privacy mode or a streamer mode; It hides many things, see the notes for more info.
+@author		thomasluigi07
+@version	2024.07.30
+@namespace	userstyles.world/user/thomasluigi07
+@homepageURL    https://github.com/Thomasluigi07/SafeMode
+@supportURL     https://github.com/Thomasluigi07/SafeMode/issues
 @license        No License
 @preprocessor	less
 ==/UserStyle== */
