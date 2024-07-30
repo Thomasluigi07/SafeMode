@@ -1,0 +1,349 @@
+/* ==UserStyle==
+@name			"Safe Mode" for Roblox
+@description    Safe Mode is a work in progress "safe mode" for Roblox. Think of it like a privacy mode, or a streamer mode. It hides your Inventory, prevents you from modifying your Settings and About, hides Friends, disables Notifications and Website Chat, disables Robux purchasing and a lot more stuff.
+@author			thomasluigi07
+@version		2024.07.30
+@namespace		userstyles.world/user/thomasluigi07
+@license        No License
+@preprocessor	less
+==/UserStyle== */
+
+@-moz-document url-prefix("https://www.roblox.com/home")
+{
+	.dark-theme .people-list, .light-theme .people-list, .list-item.friend.ng-scope, .game-card-friend-info
+	{
+		display: none !important; 
+		height: 0 !important; 
+		margin: 0px !important;
+		width: 0 !important; 
+		max-height: 0px !important;
+	}
+	
+	.people-list-container {
+		display: none !important;
+		height: 25px !important;
+		margin: 0px !important;
+	}
+}
+
+@-moz-document url-prefix("https://www.roblox.com/users/")
+{
+	.dark-theme .people-list, .light-theme .people-list, .list-item.friend.ng-scope, .profile-header-top .details-info, .profile-header-top .details-actions, .profile-header-top .header-title .tooltip-container, .rbx-tab-content #creations .ng-scope[ng-controller="profileUtilitiesController"], .profile-avatar-right, #profile-statistics-container, .layer.profile-collections, div[groups-showcase] .section .container-header .container-buttons, #groups-switcher .carousel-control, #groups-switcher .slide-item-container-right .slide-item-stats .hlist .list-item .slide-item-stat-title[ng-bind="'Heading.Rank' | translate"], .rbx-tabs-horizontal .rbx-tab-content #creations .profile-game .container-header .container-buttons, #games-switcher .carousel-control, .profile-about .section-content .form-group textarea, .profile-about .section-content .form-group .description-event .form-control-label, .profile-about .section-content .form-group .description-buttons #SaveInfoSettings, .profile-about .container-header social-link-icon-list
+	{
+		display: none !important; 
+		height: 0 !important; 
+		margin: 0px !important;
+		width: 0 !important; 
+		max-height: 0px !important;
+	}
+	
+	.profile-avatar-left {
+		width: 100%;
+	}
+	
+	#profile-current-wearing-avatar .container-header h2, div[groups-showcase] .section .container-header h2, .rbx-tabs-horizontal .rbx-tab-content #creations .profile-game .container-header h3, .profile-about .section-content .form-group .description-event .text {
+		content: "";
+		display: block;
+		font-size: 0;
+		font-weight: 700;
+		line-height: 1.4em;
+		text-align: Left;
+		margin: 0;
+		padding: 0px;
+		text-overflow: ellipsis;
+		white-space: nowrap;
+	}
+	
+	#profile-current-wearing-avatar .container-header h2:after {
+		content: "Avatar";
+		display: block;
+		font-size: 20px;
+		font-weight: 700;
+		line-height: 1.4em;
+		text-align: Left;
+		margin: 0;
+		padding: 0px;
+		text-overflow: ellipsis;
+		white-space: nowrap;
+	}
+	
+	div[groups-showcase] .section .container-header h2:after {
+		content: "Primary Group";
+		display: block;
+		font-size: 20px;
+		font-weight: 700;
+		line-height: 1.4em;
+		text-align: Left;
+		margin: 0;
+		padding: 0px;
+		text-overflow: ellipsis;
+		white-space: nowrap;
+	}
+	
+	.rbx-tabs-horizontal .rbx-tab-content #creations .profile-game .container-header h3:after {
+		content: "Featured";
+		display: block;
+		font-size: 20px;
+		font-weight: 700;
+		line-height: 1.4em;
+		text-align: Left;
+		margin: 0;
+		padding: 0px;
+		text-overflow: ellipsis;
+		white-space: nowrap;
+	}
+	
+	.profile-about .section-content .form-group .description-event .text:after {
+		content: "Changing your About info is not allowed while Safe Mode is enabled.";
+		display: block;
+		font-size: 12px;
+		font-weight: 400;
+		line-height: 1.4em;
+		text-align: Left;
+		margin: 0;
+		padding: 0px;
+		text-overflow: ellipsis;
+		white-space: nowrap;
+	}
+	
+	
+	.people-list-container {
+		display: none !important;
+		margin: 0px !important;
+		height: 0px !important;
+	}
+}
+
+@-moz-document url-prefix("https://www.roblox.com/users/")
+{
+	.hlist.avatar-cards .list-item.avatar-card, .pager-holder, .ignore-button, .friends-filter-searchbar-container, .friends-filter-status, .friends-subtitle, .tooltip-container, .friends-filter {
+		display: none !important; 
+		height: 0 !important; 
+		margin: 0px !important;
+		width: 0 !important; 
+		max-height: 0px !important;
+	}
+	
+	.hlist.avatar-cards:after {
+		content: "Failed to load content.";
+		display: block;
+		font-size: 16px;
+		font-weight: 400;
+		line-height: 1.4em;
+		text-align: center;
+		margin: 0;
+		padding: 15px;
+		text-overflow: ellipsis;
+		white-space: nowrap;
+	}
+	
+	.dark-theme .hlist.avatar-cards:after {
+		color: #bdbebe;
+	}
+	
+	.light-theme .hlist.avatar-cards:after {
+		color: #606162;
+	}
+}
+
+@-moz-document domain("roblox.com")
+{
+	#chat-friends, #dialogs, .chat-header-action .notification-red, #navbar-stream, #nav-message, #nav-friends, #nav-inventory, #nav-group, #nav-trade, #nav-blog, #nav-shop, #nav-giftcards, .left-col-list .rbx-upgrade-now, #buy-robux-popover-menu li .rbx-menu-item[href="https://www.roblox.com/upgrades/robux?ctx=navpopover"], #header-develop-md-link, #navigation-robux-container, .age-bracket-label-age, .balance-label a[href="https://www.roblox.com/upgrades/robux"], .chat-container, .text-overflow.avatar-card-label .friends .icon-text, .text-overflow.avatar-card-label .friends .icon-nav-friends, .avatar-status-container .ng-isolate-scope .avatar-card-label, .avatar-card-btns, .account-switch-menu-item, .rbx-menu-item[href="https://www.roblox.com/transactions"], .rbx-menu-item[href="https://www.roblox.com/crossdevicelogin/ConfirmCode"], groups-list, .group-rank, group-payouts, .group-details .ng-scope .rbx-tabs-horizontal #events, group-store .group-store .section-content p, friends-groups, #header-develop-sm-link, .navbar-search-option.rbx-clickable-li, .tab-content group-description .section .container-header social-link-icon-list, .group-details .ng-scope .rbx-tab-content social-links-container, .group-form, div[avatar-tab-content-header] .ng-scope .btn-float-right, #game-context-menu, .group-menu, #game-details-about-tab-container .game-about-tab-container div .game-social-links, .game-community-link-display-container, group-wall, .shout-container .avatar-headshot, .shout-container .group-shout-name, .group-header .group-caption .group-owner, .group-announcements .announcement-display .user-card .avatar-card-link, .group-announcements .announcement-display .user-card .user-card-body .user-card-body-name-container, .group-announcements-view-all-button, .group-notifications-upsell-banner, .community-link-display, .group-announcements-header .tooltip-container .group-announcements-notifications-icon, .friends-in-server-label, #rbx-friends-running-games, .rbx-navbar li .robux-menu-btn, .safety-support-page div h1, .safety-support-page div .safsup-links-container, .footer .footer-links {
+		display: none !important; 
+		content: "" !important;
+		height: 0 !important; 
+		margin: 0px !important;
+		font-size: 0px !important;
+		width: 0 !important; 
+		max-height: 0px !important;
+	}
+	
+	.group-details {
+		max-width: none !important;
+	}
+	
+	.group-details .group-shout .shout-container .group-shout {
+		padding-left: 0px;
+	}
+	
+	.group-details.col-xs-12 {
+		width: 100%;
+	}
+	
+	.chat-container.collapsed .chat-main {
+		width: 50px;
+	}
+	
+	.safety-support-page:after {
+		content: "Please disable Safe Mode first.";
+		display: block;
+		font-size: 16px;
+		font-weight: 400;
+		line-height: 1.4em;
+		text-align: center;
+		margin: 0;
+		padding: 0px;
+		text-overflow: ellipsis;
+		white-space: nowrap;
+	}
+	
+	
+	.rbx-left-col:after {
+		content: 'Safe Mode Enabled' !important;
+		font-size: 10px;
+		white-space: pre;
+		line-height: 12px;
+		text-align: center;
+		position: absolute;
+		display: block;
+		width: 100%;
+		bottom: 0;
+		margin: 6px 0;
+	}
+	
+	.footer .copyright-container:before {
+		content: 'Safe Mode Enabled' !important;
+		max-width: 970px;
+		font-size: 16px;
+		white-space: pre;
+		line-height: 12px;
+		text-align: center;
+		position: absolute;
+		font-weight: 800;
+		display: block;
+		width: 100%;
+		bottom: 0;
+		margin: 87px 0;
+	}
+	
+	.dark-theme .footer .copyright-container:before {
+		color: white;
+	}
+	.light-theme .footer .copyright-container:before {
+		color: black;
+	}
+	
+	.rbx-left-col:before {
+		content: '' !important;
+		font-size: 10px;
+		white-space: pre;
+		line-height: 10px;
+		text-align: center;
+		position: absolute;
+		display: block;
+		width: 100%;
+		bottom: 0;
+		margin: 20px 0;
+	}
+}
+
+@-moz-document url-prefix("https://www.roblox.com/my/account")
+{
+	.birthday-container, #account-field-phone, .passkey-upsell-banner, #session-management, .settings-privacy-contact, #billing-react-app-container, #subscription-management-container, #id-verification, .collapsible-user-input .text-label[for="id-verification"], .collapsible-user-input .text-label[for="gender-selector"], #gender-selector, .collapsible-user-input .text-label[for="account-country-id"], #account-country-id, #phoneVerificationUpsell-container, div[role=dialog] div[aria-labelledby="user-settings-modal-title"] .modal-dialog .modal-content .modal-body, div[role=dialog] div[aria-labelledby="user-settings-modal-title"] .modal-dialog .modal-content .modal-footer, #security-tab, #privacy, #security, #billing, #subscriptions, #parental-controls, #notifications, #app-permissions, #rbx-account-info-header, .account-change-settings-button, .social-networks-container  {
+		display: none !important; 
+		content: "" !important;
+		height: 0 !important; 
+		margin: 0px !important;
+		font-size: 0px !important;
+		width: 0 !important; 
+		max-height: 0px !important;
+	}
+	
+	div[role=dialog] div[aria-labelledby="user-settings-modal-title"] .modal-dialog .modal-content .modal-header .user-settings-modal-title-container h4 {
+		content: "";
+		display: block;
+		font-size: 0;
+		font-weight: 700;
+		line-height: 1.4em;
+		text-align: Left;
+		margin: 0;
+		padding: 0px;
+		text-overflow: ellipsis;
+		white-space: nowrap;
+	}
+	
+	div[role=dialog] div[aria-labelledby="user-settings-modal-title"] .modal-dialog .modal-content .modal-header .user-settings-modal-title-container h4:after {
+		content: "Not Allowed";
+		display: block;
+		font-size: 20px;
+		font-weight: 400;
+		line-height: 1.4em;
+		text-align: center;
+		margin: 0;
+		padding: 0 30px;
+		text-overflow: ellipsis;
+		white-space: nowrap;
+	}
+	
+	#react-user-account-base h1:after {
+		content: "Safe Mode Enabled";
+		display: block;
+		font-size: 12px;
+		font-weight: 400;
+		line-height: 1.4em;
+		text-align: left;
+		margin: 0;
+		padding: 0px;
+		text-overflow: ellipsis;
+		white-space: nowrap;
+	}
+}
+
+@-moz-document url-prefix("https://www.roblox.com/users/74193710/inventory")
+{
+	.current-items #assetsItems, .assets-explorer-title {
+		display: none !important; 
+		content: "" !important;
+		height: 0 !important; 
+		margin: 0px !important;
+		font-size: 0px !important;
+		width: 0 !important; 
+		max-height: 0px !important;
+	}
+	
+	.current-items:after {
+		content: "You cannot see this user's inventory.";
+		display: block;
+		font-size: 16px;
+		font-weight: 400;
+		line-height: 1.4em;
+		text-align: center;
+		margin: 0;
+		padding: 15px;
+		text-overflow: ellipsis;
+		white-space: nowrap;
+	}
+	
+	.dark-theme .current-items:after {
+		color: #bdbebe;
+	}
+	
+	.light-theme .current-items:after {
+		color: #606162;
+	}
+}
+
+@-moz-document url-prefix("https://www.roblox.com/upgrades/robux"), url-prefix("https://www.roblox.com/upgrades/paymentmethods")
+{
+	#robux-page, #payment-header, #payment-method-container {
+		display: none !important; 
+		height: 0 !important; 
+		margin: 0px !important;
+		width: 0 !important; 
+		max-height: 0px !important;
+	}
+	
+	#verificationUpsell-container:before, #payment-methods-container:after {
+		content: "Buying Robux is not allowed in Safe Mode.";
+		display: block;
+		font-size: 16px;
+		font-weight: 400;
+		line-height: 1.4em;
+		text-align: center;
+		margin: 0;
+		padding: 0px;
+		text-overflow: ellipsis;
+		white-space: nowrap;
+	}
+	
+}
