@@ -1,3 +1,6 @@
+# Discontinued
+This theme is no longer being updated due to me no longer working on Roblox stuff. As such, this theme has probably been broken immediately due to Roblox website changes.
+
 # This version of Safe Mode is always going to be out of date.
 [Please use this version.](https://userstyles.world/style/17439)
 ## Safe Mode for Roblox
